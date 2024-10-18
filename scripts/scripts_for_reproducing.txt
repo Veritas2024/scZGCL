@@ -1,0 +1,4 @@
+python main.py --name Diaphragm_Smart-seq2 --n_clusters 5 --lr 0.0002 --heads [6,1] --k 75 --fine_epochs 100 --epochs 600 --batch_size 256
+python main.py --name Limb_Muscle_Smart-seq2 --n_clusters 6 --lr 0.0001 --heads [6,1] --k 70 --fine_epochs 100 --epochs 600 --batch_size 1024
+python main.py --name Lung_Smart-seq2 --n_clusters 11 --lr 0.0001 --heads [6,1] --k 75 --fine_epochs 100 --epochs 600 --batch_size 1024
+python main.py --name Trachea_Smart-seq2 --n_clusters 4 --lr 0.0002 --heads [6,1] --k 75 --fine_epochs 100 --epochs 600 --batch_size 1024

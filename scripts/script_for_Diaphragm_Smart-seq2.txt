@@ -1,0 +1,1 @@
+python main.py --name Diaphragm_Smart-seq2 --n_clusters 5 --lr 0.0002 --heads [6,1] --k 75 --fine_epochs 100 --epochs 600 --batch_size 256
