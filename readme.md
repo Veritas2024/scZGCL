@@ -4,7 +4,7 @@ A pytorch implementation of the paper "Deep single-cell RNA-seq data clustering 
 
 ## Introduction of the files:
 ### 1. Directories
-The `data` directory contains a zip file `processed_data` with twelve datasets to reproduce the results of experiments. Before reproducing, you need to extract all the files in the zip `processed data` to `data` folder.
+The `data` directory contains a zip file `processed_data` with four example datasets to reproduce the results of experiments. Before reproducing, you need to extract all the files in the zip `processed data` to `data` folder.
 
 The `layers` directory contains implementation of the layers of our method.
 
@@ -26,13 +26,13 @@ The `results` directory contains the detailed results in Parameter Analysis and 
 `t-SNE_drawing.py` is the code for 2-D clustering visualization.
 
 ## Quick start:
-First, configure the Python environment on Linux system according to `requirements.txt`.
+**First**, configure the Python environment on Linux system according to `requirements.txt`. Just for reference, we run our experiments on an Ubuntu server with an NVIDIA RTX 4090 GPU and 24GB of memory.
 
 `pip install -r requirements.txt`
 
-Second, unzip the `processed_data.zip` to `data` folder.
+**Second**, unzip the `processed_data.zip` to `data` folder.
 
-Third, reproduce experiments on various datasets. Use the example datasets from `processed_data.zip` directory or download more datasets from （网址）. Take the dataset **Diaphragm_Smart-seq2** as an example:
+**Third**, reproduce experiments on various datasets. Use the example datasets from `processed_data.zip` directory or download more datasets from [scziDesk](https://github.com/xuebaliang/scziDesk). Take the dataset **Diaphragm_Smart-seq2** as an example:
 
 1. Add executable permissions to `.sh` file:
 
@@ -42,10 +42,6 @@ Third, reproduce experiments on various datasets. Use the example datasets from 
 
 `./script_for_Diaphragm_Smart-seq2.sh`
 
-3. After running `.sh`, you can see result in `Diaphragm_Smart-seq2.log` in the `logs` directory. For visualization by , run t-SNE_drawing.py
+3. After running `.sh`, you will see two txt files which are named `Diaphragm_Smart-seq2_zinb_label.txt` and `Diaphragm_Smart-seq2_zinb_latent.txt`. See results in `Diaphragm_Smart-seq2.log` in the `logs` directory. For 2-D visualization by t-SNE, run `t-SNE_drawing.py` in the `scZGCL` directory.
 
-Third, run **script_for_Diaphragm_Smart-seq2.sh** to reproduce result on **Diaphragm(Smart-seq2)** dataset and view the results through the corresponding log file.
-
-or you can download all datasets from （网址）
-
-Forth, after running script `script_for_Diaphragm_Smart-seq2.sh`, you will see two txt files which are named `Diaphragm_Smart-seq2_zinb_label.txt` and `Diaphragm_Smart-seq2_zinb_latent.txt`. Run `t-SNE_drawing.py` to see the 2-D clustering visualization by t-SNE.
+For other datasets, the procedure is the same. The corresponding script for each dataset is in `scripts_for_all_datasets.sh`.
