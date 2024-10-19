@@ -20,11 +20,15 @@ The `results` directory contains the detailed results in Parameter Analysis and 
 
 ### 2. Single files:
 `requirements.txt` contains the environmental requirement for reproducing our results. 
+
 `main.py`, `embedder.py` are codes for implementing scZGCL.
+
 `t-SNE_drawing.py` is the code for 2-D clustering visualization.
 
-Quick start:
+## Quick start:
 First, configure the Python environment on Linux system according to `requirements.txt`.
+
+`pip install -r requirements.txt`
 
 Second, unzip the `processed_data.zip` to `data` folder.
 
