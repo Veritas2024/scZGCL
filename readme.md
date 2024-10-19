@@ -2,9 +2,11 @@
 ## Summary:
 A pytorch implementation of the paper "Deep single-cell RNA-seq data clustering with ZINB-based graph contrastive learning".
 
+![Architecture](./Architecture.png)
+
 ## Introduction of the files:
 ### 1. Directories
-The `data` directory contains a zip file `processed_data` with four example datasets to reproduce the results of experiments. Before reproducing, you need to extract all the files in the zip `processed data` to `data` folder.
+The `data` directory contains a zip file `processed_data` with four example datasets to reproduce the results of experiments. For other datasets, see [scziDesk](https://github.com/xuebaliang/scziDesk). Before reproducing, you need to extract all the files in the zip `processed data` to `data` folder.
 
 The `layers` directory contains implementation of the layers of our method.
 
@@ -44,4 +46,10 @@ The `results` directory contains the detailed results in Parameter Analysis and 
 
 3. After running `.sh`, you will see two txt files which are named `Diaphragm_Smart-seq2_zinb_label.txt` and `Diaphragm_Smart-seq2_zinb_latent.txt`. See results in `Diaphragm_Smart-seq2.log` in the `logs` directory. For 2-D visualization by t-SNE, run `t-SNE_drawing.py` in the `scZGCL` directory.
 
-For other datasets, the procedure is the same. The corresponding script for each dataset is in `scripts_for_all_datasets.sh`.
+`python t-SNE_drawing.py`
+
+For other datasets, the procedure is the same except 2-D visualization. You need to change `dataset_name` on line 12 in `t-SNE_drawing.py`.
+
+`dataset_name = "Diaphragm_Smart-seq2"  # change this if you want to see 2-D visualization of other datasets`
+
+The corresponding script for each dataset is in `scripts_for_all_datasets.sh`.
